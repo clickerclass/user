@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: toures-balon-usuario
+  profiles: prod
+  cloud:
+    config:
+      uri: http://10.152.183.226:8888
+
+      
