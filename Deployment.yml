@@ -1,3 +1,17 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: user
+data:
+  application-prod.yml: |-
+    spring:
+      data:
+        mongodb:
+          host: 192.168.0.188
+          database: clickerclass_user
+      zipkin:
+        base-url: http://192.168.0.188:9411
+---
 kind: Deployment
 apiVersion: apps/v1
 metadata:
@@ -57,17 +71,3 @@ spec:
         target:
           type: Utilization
           averageUtilization: 50
----
-kind: ConfigMap
-apiVersion: v1
-metadata:
-  name: user
-data:
-  application-prod.yml: |-
-    spring:
-      data:
-        mongodb:
-          host: 192.168.0.188
-          database: clickerclass_user
-      zipkin:
-        base-url: http://192.168.0.188:9411
