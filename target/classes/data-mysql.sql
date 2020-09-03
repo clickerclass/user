@@ -1,6 +1,0 @@
-INSERT IGNORE  INTO `rol` (`id`, `nombre`) VALUES ('1', 'PRODUCTOS_CONSULTA'), ('2', 'PRODUCTOS_ADMON'), ('3', 'CAMPANNAS'), ('4', 'ORDENES_CONSULTA'), ('5', 'ORDENES_ADMON '), ('6', 'CLIENTES_CONSULTA'), ('7', 'CLIENTES_ADMON');
-INSERT IGNORE  INTO `tipo_usuario` (`id`, `nombre`) VALUES (1, 'Cliente'),(2, 'Colaborador');
-INSERT IGNORE  INTO `tipo_documento` (`id`, `name`) VALUES ('1', 'Cédula'), ('2', 'Tarjeta de identidad'), ('3', 'Cédula de Extranjería'), ('4', 'Pasaporte');
-INSERT IGNORE  INTO `usuario` (`id`, `apellido`, `correo`, `documento`, `fecha_nacimiento`, `nombre`, `nombre_usuario`, `tipo_documento_id`, `tipo_usuario_id`) VALUES('3fc5cc0a-5bf5-4f5d-aa8d-df617ad919f9', 'ALCALA', 'ALEJOAB12@HOTMAIL.COM', '1010194766', '1990-07-16 08:28:43', 'MANUEL', 'ALEJOAB12', 1, 1);
-INSERT IGNORE  INTO `autenticacion` (`id`, `activo`, `contrasena`, `fecha_creacion`, `usuario_id`) VALUES (1, 1, '$2a$10$.pN3BHZjRcScsTVqSXOmSu9k7F4qXyL5sxcmRMdZ0QUnqmRedeARq', '2020-05-31 23:32:05', '3fc5cc0a-5bf5-4f5d-aa8d-df617ad919f9');
-INSERT IGNORE  INTO `tipo_usuario_rol` (`id`, `tipo_usuario_id`,`rol_id`) VALUES (1, 2,1), (2, 2,2), (3, 2,3), (4, 2,4);
